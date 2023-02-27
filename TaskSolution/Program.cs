@@ -15,19 +15,16 @@ string[] InitialArray()
     return Console.ReadLine().Split(",");
 }
 //Метод реализует пользовательский ввод значений элементов массива
-int FindNumbersOfRows(string[] arr, int elength)
+int FindNumbersOfRows(string[] arr1, int elength)
 {
-
     int count = 0;
-
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < arr1.Length; i++)
     {
-        if (arr[i].Length <= elength)
+        if (arr1[i].Length <= elength)
         {
             count++;
         }
     }
-
     return count;
 }
 //Метод находит количетво строк с символами <= elength или в нашем случае 3
@@ -35,7 +32,6 @@ int FindNumbersOfRows(string[] arr, int elength)
 string[] CreateNewArray(string[] arr1, int elength)
 {
     string[] arr2 = new string[FindNumbersOfRows(arr1, elength)];
-
     for (int i = 0, j = 0; i < arr1.Length; i++)
     {
         if (arr1[i].Length <= elength)
@@ -44,7 +40,6 @@ string[] CreateNewArray(string[] arr1, int elength)
             j++;
         }
     }
-
     return arr2;
 }
 //Метод создает новый массив и заполняет его строками исходного массива, чья длина < 3 символов
