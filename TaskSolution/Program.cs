@@ -4,7 +4,6 @@
 
 
 string[] array = InitialArray();
-int res = FindNumbersOfRows(array, 3);
 PrintArray(array);
 string[] result = CreateNewArray(array, 3);
 Console.Write("->");
